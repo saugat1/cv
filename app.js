@@ -1,13 +1,12 @@
 $(document).ready(function () {
-    var token = $("#token").val();
    
     $("#submit").on("click", function () {
+        var token = $("#token").val();
         var type = $("#type").val();
          if (token == "") {
              alert("token is required");
-             return false;
-        }
-        if (token !== "" && token.length > 20) {
+             //return false;
+        }else {
             $.ajax({
                 url: "reaction.php",
                 type: "GET",
