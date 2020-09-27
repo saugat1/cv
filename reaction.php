@@ -38,6 +38,6 @@ curl("https://graph.facebook.com/v2.11/".$stat['data'][$i - 1]['id']."/reactions
 
 echo 'Content ID : '.$stat['data'][$i - 1]['id'].' <span style="color:green"> [SUCCESS]</span> Reacted // Script by FADXPL017<br>';
 }
-sleep(2000);
+sleep(0);
 }
 ?>
