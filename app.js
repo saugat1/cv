@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    const token = $("#token").val();
+    var token = $("#token").val();
    
     $("#submit").on("click", function () {
-        const type = $("#type").val();
-         if (token === "") {
+        var type = $("#type").val();
+         if (token == "") {
              alert("token is required");
              return false;
         }
