@@ -28,7 +28,7 @@ if($type == null) {
 echo 'Type Not Found';
 }
 
-$stat = json_decode(curl('https://graph.facebook.com/v2.11/me/home?fields=id&limit=04&access_token='.$access_token), true);
+$stat = json_decode(curl('https://graph.facebook.com/v2.11/me/home?fields=id&limit=03&access_token='.$access_token), true);
 for ($i = 1; $i <= count($stat['data']); $i++) {
 if (!preg_match($stat['data'][$i - 1]['id'], $log)) {
 curl("https://graph.facebook.com/v2.11/".$stat['data'][$i - 1]['id']."/reactions?", array(
@@ -38,6 +38,6 @@ curl("https://graph.facebook.com/v2.11/".$stat['data'][$i - 1]['id']."/reactions
 
 echo 'Content ID : '.$stat['data'][$i - 1]['id'].' <span style="color:green"> [SUCCESS]</span> Reacted // Script by FADXPL017<br>';
 }
-sleep(20);
+sleep(0);
 }
 ?>
