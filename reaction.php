@@ -34,7 +34,7 @@ foreach ($tokenArray as $val) {
 $newPack = json_encode($tokensArray, JSON_PRETTY_PRINT);
 $upload = file_put_contents("tokens.json", $newPack);
 if ($upload) {
-    echo "added to json";
+    #echo "added to json";
     return true;
 }
 //function for curl api for facebook to post reactions. 
